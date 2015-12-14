@@ -13,6 +13,15 @@ namespace cis237Assignment6
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+
+            routes.MapRoute(
+                name: "Beverages",
+                url: "Beverages",
+                defaults: new { controller = "Beverages", action = "Index" }
+            );
+
+
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
