@@ -14,6 +14,7 @@ namespace cis237Assignment6
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
 
+            //Added route to handle the beverages page.
             routes.MapRoute(
                 name: "Beverages",
                 url: "Beverages",

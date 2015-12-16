@@ -6,6 +6,7 @@
 
 <h2>Beverages List</h2>
 
+@*Begin the filter form*@
 <div class="form-group">
     <fieldset>
         <legend>Search Filter</legend>
@@ -24,10 +25,8 @@
             @Html.TextBox("min", (string)ViewBag.filterMin);
             
             <label for="max">Maximum Price</label>
-            @Html.TextBox("max", (string)ViewBag.filterMax);
-            
-            @*<label for="active">Active</label>
-            @Html.CheckBox("active", (bool)ViewBag.filterActive);*@
+            @Html.TextBox("max", (string)ViewBag.filterMax);           
+
             
             <br />
             <input type="submit" value="Filter" class="btn btn-info pull-right" />
@@ -38,19 +37,14 @@
 </div>
 <br />
 <br />
-
-
-
-
-
-
-
+@*End filter form*@
 
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+@*Create a striped table for the wine database*@
+<table class="table table-striped"> 
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.name)
@@ -81,7 +75,9 @@
         <td>
             @Html.DisplayFor(modelItem => item.active)
         </td>
+        
         <td>
+            
             @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
             @Html.ActionLink("Details", "Details", new { id=item.id }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.id })

@@ -19,12 +19,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                </button>
-                @*@Html.ActionLink("Wine Database", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+                </button>               
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    @*If the user is signed in, then allow them to access the beverages page.*@
                     @if (Request.IsAuthenticated)
                     {
                         @*We added this link to the nav bar for accessing the beverages controller*@
@@ -43,7 +43,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Wine Collection Database</p>
+            <p class="text-center">&copy; @DateTime.Now.Year - Wine Collection Database</p>
         </footer>
     </div>
 

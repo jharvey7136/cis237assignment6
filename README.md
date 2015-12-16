@@ -4,6 +4,22 @@
 
 ## Author
 
+John Harvey
+
+## New Description
+
+Welcome to the wine collection database. This web application uses ASP.NET MVC to access and manage our wine database. When a user accesses the website for the first time, they will not be able to view or edit the wine database unless registering with a valid email address and password. Upon registering, the user will have full access to our database. For more information, there is a Contact page and an About page within the website. 
+
+The user will be able to:
+
+*View: Access and view our entire wine collection database.
+*Add: Create new wine items and add them to the database.
+*Edit: Edit existing wine items.
+*Delete: Remove unwanted items from the collection.
+*Filter: Browse our vast collection by wine name, pack, or within a certain price range.
+
+Once again, users will ONLY have access to the database when logged in with a registered email address.
+
 ## Description
 
 You are to create a web application using ASP.NET MVC to manage our beverage database.
@@ -97,6 +113,9 @@ This one is okay, and it is from Microsoft:
 
 ## Outside Resources Used
 
+I referred to our in class project 6 for help with the filter. Also referred to bootstrap's main website to learn how to make the database table striped plus other cool stuff about bootstrap.
+
 ## Known Problems, Issues, And/Or Errors in the Program
 
+Had trouble implementing the ‘active’ button on the filter where only the wines that were checked active were showing up in the database regardless of whether the filter checkbox was checked or not. All CRUD regarding the database seems to function however.
 

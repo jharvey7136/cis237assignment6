@@ -24,7 +24,7 @@ namespace cis237Assignment6.Controllers
             string filterPack = "";
             string filterMin = "";
             string filterMax = "";
-            //bool filterActive = true;
+            
 
             int min = 0;
             int max = 10000;
@@ -54,19 +54,12 @@ namespace cis237Assignment6.Controllers
                 max = Int32.Parse(filterMax);
             }
 
-            //if (Session["active"] != null)
-            //{
-            //    filterActive = (bool)Session["active"];
-            //}
-
-
 
 
             IEnumerable<Beverage> filtered = BevToSearch.Where(bev => bev.price >= min &&
                                                                       bev.price <= max &&
                                                                       bev.name.Contains(filterName) &&
-                                                                      bev.pack.Contains(filterPack));
-                                                                      //bev.active == filterActive);
+                                                                      bev.pack.Contains(filterPack));                                                                      ;
 
             
             IEnumerable<Beverage> finalFiltered = filtered.ToList();
@@ -76,7 +69,7 @@ namespace cis237Assignment6.Controllers
             ViewBag.filterPack = filterPack;
             ViewBag.filterMin = filterMin;
             ViewBag.filterMax = filterMax;
-            //ViewBag.filterActive = filterActive;
+            
             
             return View(finalFiltered);       
 
